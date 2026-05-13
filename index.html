@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Concept Construction &amp; Consultant</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-brand">
+    <img src="logo.svg" alt="Concept Construction & Consultant" class="nav-logo"/>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#activities">Activities</a></li>
+    <li><a href="#associates">Associates</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon"></i></button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <span class="badge">Est. 2005 · Trusted Builders &amp; Consultants</span>
+    <h1>Building Dreams,<br/><span>Constructing Futures</span></h1>
+    <p>From foundation to finish — we deliver excellence in every brick, beam, and blueprint.</p>
+    <div class="hero-btns">
+      <button onclick="smoothScroll('#projects')">View Projects</button>
+      <button class="outline" onclick="smoothScroll('#contact')">Get a Quote</button>
+    </div>
+    <div class="hero-stats">
+      <div><h3>250+</h3><p>Projects Done</p></div>
+      <div><h3>18+</h3><p>Years Experience</p></div>
+      <div><h3>120+</h3><p>Expert Team</p></div>
+      <div><h3>98%</h3><p>Client Satisfaction</p></div>
+    </div>
+  </div>
+  <div class="hero-img">
+    <div class="hero-card">
+      <img src="logo.svg" alt="Logo" style="height:90px;width:auto;margin-bottom:16px;display:block;margin-left:auto;margin-right:auto;"/>
+      <span>Currently Building</span>
+      <h4>3 Active Sites</h4>
+    </div>
+  </div>
+</section>
+
+<!-- ACTIVITIES -->
+<section class="section" id="activities">
+  <div class="section-header">
+    <h2>Construction Activities</h2>
+    <p>End-to-end services across all construction domains</p>
+  </div>
+  <div class="activities-grid" id="activitiesGrid"></div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section dark-section" id="projects">
+  <div class="section-header">
+    <h2>Our Projects</h2>
+    <p>Completed milestones & ongoing work</p>
+  </div>
+  <div class="project-tabs">
+    <button class="tab active" onclick="filterProjects('all', this)">All</button>
+    <button class="tab" onclick="filterProjects('completed', this)">Completed</button>
+    <button class="tab" onclick="filterProjects('ongoing', this)">Ongoing</button>
+  </div>
+  <div class="projects-grid" id="projectsGrid"></div>
+</section>
+
+<!-- ASSOCIATES -->
+<section class="section" id="associates">
+  <div class="section-header">
+    <h2>Our Associates</h2>
+    <p>Trusted partners powering our projects</p>
+  </div>
+  <div class="associates-grid" id="associatesGrid"></div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section dark-section" id="reviews">
+  <div class="section-header">
+    <h2>Client Reviews</h2>
+    <p>What our clients say about us</p>
+  </div>
+  <div class="reviews-grid" id="reviewsGrid"></div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact-section" id="contact">
+  <div class="section-header">
+    <h2>Get In Touch</h2>
+    <p>Let's build something great together</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="contact-item"><i class="fas fa-map-marker-alt"></i><div><h4>Office</h4><p>Plot 45, Industrial Area, Sector 7, New Delhi - 110001</p></div></div>
+      <div class="contact-item"><i class="fas fa-phone"></i><div><h4>Phone</h4><p>+91 74897 51694 &nbsp;·&nbsp; +91 74897 51694<br/>+91 74897 51694</p></div></div>
+      <div class="contact-item"><i class="fas fa-envelope"></i><div><h4>Email</h4><p>conceptconstruction@gmail.com</p></div></div>
+      <div class="contact-item"><i class="fas fa-clock"></i><div><h4>Hours</h4><p>Mon–Sat: 9AM – 6PM</p></div></div>
+    </div>
+    <form class="contact-form" onsubmit="submitForm(event)">
+      <input type="text" placeholder="Your Name" required/>
+      <input type="email" placeholder="Email Address" required/>
+      <input type="tel" placeholder="Phone Number"/>
+      <select>
+        <option value="">Select Service</option>
+        <option>Residential Construction</option>
+        <option>Commercial Construction</option>
+        <option>Interior Design</option>
+        <option>Renovation</option>
+        <option>Project Consultation</option>
+      </select>
+      <textarea placeholder="Your Message" rows="4"></textarea>
+      <button type="submit">Send Message <i class="fas fa-paper-plane"></i></button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <img src="logo.svg" alt="Concept Construction" class="footer-logo"/>
+      <p>Building trust, one project at a time.</p>
+      <div class="footer-contact-mini">
+        <span><i class="fas fa-envelope"></i> conceptconstruction@gmail.com</span>
+        <span><i class="fas fa-phone"></i> +91 74897 51694 &nbsp;|&nbsp; +91 74897 51694</span>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="#home">Home</a><a href="#projects">Projects</a>
+      <a href="#activities">Services</a><a href="#contact">Contact</a>
+    </div>
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Concept Construction &amp; Consultant. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- PROJECT POPUP -->
+<div class="popup-overlay" id="popupOverlay" onclick="closePopup()">
+  <div class="popup" onclick="event.stopPropagation()" id="projectPopup">
+    <button class="popup-close" onclick="closePopup()"><i class="fas fa-times"></i></button>
+    <div id="popupContent"></div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
