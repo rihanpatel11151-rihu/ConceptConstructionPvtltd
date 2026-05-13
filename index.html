@@ -15,13 +15,16 @@
   <div class="nav-brand">
     <img src="logo.png" alt="Concept Construction & Consultant" class="nav-logo"/>
   </div>
-  <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#activities">Activities</a></li>
-    <li><a href="#associates">Associates</a></li>
-    <li><a href="#reviews">Reviews</a></li>
-    <li><a href="#contact">Contact</a></li>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" onclick="closeMenu()">Home</a></li>
+    <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+    <li><a href="#activities" onclick="closeMenu()">Activities</a></li>
+    <li><a href="#associates" onclick="closeMenu()">Associates</a></li>
+    <li><a href="#reviews" onclick="closeMenu()">Reviews</a></li>
+    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
   </ul>
   <button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon"></i></button>
 </nav>
@@ -45,7 +48,7 @@
   </div>
   <div class="hero-img">
     <div class="hero-card">
-      <img src="logo.png" alt="Logo" style="height:90px;width:auto;margin-bottom:16px;display:block;margin-left:auto;margin-right:auto;"/>
+      <img src="logo.png" alt="Logo" style="height:120px;width:auto;margin-bottom:16px;display:block;margin-left:auto;margin-right:auto;"/>
       <span>Currently Building</span>
       <h4>3 Active Sites</h4>
     </div>
@@ -101,7 +104,7 @@
   </div>
   <div class="contact-grid">
     <div class="contact-info">
-      <div class="contact-item"><i class="fas fa-map-marker-alt"></i><div><h4>Office</h4><p>Plot 45, Industrial Area, Sector 7, New Delhi - 110001</p></div></div>
+      <div class="contact-item"><i class="fas fa-map-marker-alt"></i><div><h4>Office</h4><p>Plot 45, Islampura, Panthmundla, dewas(MP) - 455001</p></div></div>
       <div class="contact-item"><i class="fas fa-phone"></i><div><h4>Phone</h4><p>+91 74897 51694 &nbsp;·&nbsp; +91 74897 51694<br/>+91 74897 51694</p></div></div>
       <div class="contact-item"><i class="fas fa-envelope"></i><div><h4>Email</h4><p>conceptconstruction@gmail.com</p></div></div>
       <div class="contact-item"><i class="fas fa-clock"></i><div><h4>Hours</h4><p>Mon–Sat: 9AM – 6PM</p></div></div>

@@ -271,7 +271,26 @@ function submitForm(e) {
   e.target.reset();
 }
 
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closePopup(); });
+function toggleMenu() {
+  const nav = document.getElementById('navLinks');
+  const btn = document.getElementById('hamburger');
+  nav.classList.toggle('open');
+  btn.classList.toggle('open');
+}
+
+function closeMenu() {
+  document.getElementById('navLinks').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+}
+
+// Close menu on outside click
+document.addEventListener('click', e => {
+  const nav = document.getElementById('navLinks');
+  const btn = document.getElementById('hamburger');
+  if (!nav.contains(e.target) && !btn.contains(e.target)) closeMenu();
+});
+
+
 
 renderActivities();
 renderProjects();
